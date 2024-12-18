@@ -1,0 +1,39 @@
+{% extends "presentation/layout.html" %}
+
+{% block title%}
+    Unit 1
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div style="margin-left: 50px">
+            By using this link, I have allowed the user to go to a completely new page, which you can see we are doing in this presentation.
+            <br>
+            <br>
+            Heres how we created it:
+            <ul>
+                <li>First, set up an html page for your link in the templates category, then also use a template like this in a separate html page to go to the new one "a class="nav-link" href=" url 'newpage.html' "More Cool Stuff Link a" (I left out key symbols to not intefere with code)</li>
+                <li>Next you would want to create a function to do so in views.py which would look like this:
+                    <br>def newpage(request):
+                    <br>return render(request, "presentation/newpage.html")
+                </li>
+                <li>Finally, you would want to set up a url to complete this request, to do so, in urls.py:
+                    <br>path("newpage", views.newpage, name="newpage")
+                </li>
+            </ul>
+            <br>
+            <br>
+            In Django, we learned how to use certain lines in order to perform functions, usually these lines are surrounded by a curly bracket and percent symbol:
+            <ul>
+                <li>One of these include {load static}, which loads the static parts of your code, that being the stylesheet for CSS</li>
+                <li>Another could include {for blank in blank} and {endfor} which is a for loop</li>
+                <li>Finally, one last one of these lines that Django includes is {block body} and {endblock} which helps with the design of the webpage by creating certain blocks.</li>
+            <ul>
+            <br>
+            Most of these applications of Django can be found in our Wikipedia Project:
+            <br><a class="nav-link" href="https://youtu.be/DQ4OMjWo-vw?si=dXby0s-Pxx9BRgL7">Wikipedia Project</a>
+            <br><img src="https://i.ytimg.com/vi/Ad1LuiG7haw/maxresdefault.jpg" alt="img" style="height:30%; width:30%;">
+
+        </div>
+    </body>
+{% endblock %}

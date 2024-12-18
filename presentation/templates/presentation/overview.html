@@ -1,0 +1,53 @@
+{% extends "presentation/layout.html" %}
+
+{% load static %}
+
+{% block title%}
+    Overview
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'presentation/styles.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center; margin: 20px;">Introduction</h1>
+    <h6 style="text-align: center; margin: 20px;">What is CS50 web development?</h6>
+    <p style="text-align: center; margin: 20px;"> 
+        In "HarvardX: CS50's Web Programming with Python and JavaScript" we learn about various topics on how to build a website using various coding methods and topics we will talk about today.
+    </p>
+    <div>
+    <p style="text-align: left; margin: 20px; float: left; width:60%"> 
+        This course is free through EdX and is taught by Harvard. Brian Yu (my glorious king, pictured on the right) is the one who specifically teaches us about web development giving us hour long lectures about certain topics with hands-on applications. In addition to this, for every unit we have projects based upon a certain topic, such as python. We will go over this later.
+        <br>
+        <br>
+        Some of the topics include:
+        <br>
+        - HTML, CSS***
+        <br>
+        - Git***
+        <br>
+        - Python***
+        <br>
+        - Django***
+        <br>
+        - SQL, Models, and Migrations***
+        <br>
+        - JavaScript
+        <br>
+        - User Interfaces
+        <br>
+        - Testing, CI/CD
+        <br>
+        - Scalability and Security
+        <br>
+        <br>
+        The ones that have stars are the ones we have got through in the first semester and will be talking about.
+        <br>
+        Also in this course, upon completion and purchase, there is a certificate that you can obtain from HarvardX, stating completion.
+        <img style="margin-top: 15px; float: left; height:30%; width:30%;" src="https://miro.medium.com/v2/resize:fit:1400/1*oV_p9IHaOEnj4-RYRklQRA.png" alt="Cs50">
+    </p>
+
+    <img style="margin-top: 15px; float: right; height:30%; width:30%;" src="https://brianyu.me/_next/static/media/profile.36a356f8.png" alt="Cs50">
+    </div>
+{% endblock %}

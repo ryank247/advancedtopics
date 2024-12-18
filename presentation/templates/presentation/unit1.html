@@ -1,0 +1,48 @@
+{% extends "presentation/layout.html" %}
+
+{% block title%}
+    Unit 1
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div style="margin-left: 50px">
+            In Unit 1, we learned integration of Python, using Django, which made it easier to handle web development rapidly:
+            <br>
+            To install Django, open up a new terminal, and do:
+            <br>
+            <strong>pip3 install Django</strong>
+            <br>
+            <strong>django-admin startproject</strong> <i>PROJECT_NAME</i>
+            <br>
+            <strong>cd</strong> <i>PROJECT_NAME</i>
+            <br>
+            <br>
+            We also learned how to run a server, creating your very own local website:
+            <br>
+            To do so, write in terminal:
+            <br>
+            <strong>python manage.py runserver</strong>
+            <br>
+            <br>
+            By using Django and Python, we have the ability to change our HTML and Website from being static, where it is a still website, to <strong>dynamic</strong>, <br> which is a website that can change HTML and CSS depending on user input or other methods.
+            <br>
+            <br>
+            So far if everything worked, and you visit the url provided in the terminal, the webpage should look like this:
+            <br>
+            <img src="https://cs50.harvard.edu/web/2020/notes/3/images/landing.png" alt="img" style="height:30%; width:30%;">
+
+            <br>
+            <br>
+            Using Django, it allows us to visit different pages withing the website, such like this:
+            <br>
+            <a class="nav-link" href="{% url 'unit1more' %}">More Cool Stuff Link</a>
+
+        </div>
+
+
+
+
+
+    </body>
+{% endblock %}

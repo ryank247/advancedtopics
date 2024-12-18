@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>{% block title %}Advanced Topics Presentation{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        {% block extra_head %}
+            <link href="{% static 'presentation/styles.css' %}" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'overview' %}">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'unit0' %}">Unit 0</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'unit1' %}">Unit 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'unit2' %}">Unit 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'thanks' %}">The End</a>
+            </li>
+        </ul>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

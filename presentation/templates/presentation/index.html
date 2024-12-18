@@ -1,0 +1,19 @@
+{% extends "presentation/layout.html" %}
+
+{% load static %}
+
+{% block title%}
+    Insane Title
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'presentation/styles.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center; margin: 20px;">Advanced Topics Presentation</h1>
+    <h6 style="text-align: center; padding: 25px">by: Cooper Chung and Ryan Koester</h6>
+    <div class="flex-container">
+    <img style="margin-top: 15px; vertical-align: middle; height:100%; width:100%;" src="https://members-csforall.imgix.net/members/logos/cs50-black.PNG" alt="Cs50">
+    </div>
+{% endblock %}

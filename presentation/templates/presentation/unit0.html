@@ -1,0 +1,69 @@
+{% extends "presentation/layout.html" %}
+
+{% load static %}
+
+{% block title%}
+    Unit 0
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'presentation/styles.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div style="margin-left: 50px">
+            In Unit 0, we learned some basic html and css methods such as...<br/><br/>
+            making headings of different sizes:
+            <h1>BIG HEADING</h1>
+            <h3>Smaller Heading</h3>
+            <h6>smallest heading</h6><br/><br/>
+
+            <strong>bolding</strong> a word, <i>italicizing</i> a word, or making a word a <a href="https://cs50.harvard.edu/">hyperlink</a><br/><br/>
+            
+            Unordered lists:
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+            And ordered lists:
+            <ol>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ol><br/><br/>
+
+            <span style="color:red;">Some </span><span style="color:green;">colorful </span><span style="color:blue;">text </span><br/><br/>
+
+            Tables: <br/>
+            <table>
+                <thead>
+                    <th>Ocean</th>
+                    <th>Average Depth</th>
+                    <th>Maximum Depth</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pacific</td>
+                        <td>4280 m</td>
+                        <td>10911 m</td>
+                    </tr>
+                    <tr>
+                        <td>Atlantic</td>
+                        <td>3646 m</td>
+                        <td>8486 m</td>
+                    </tr>
+                </tbody>
+            </table><br/><br/>
+
+            Images: <br/>
+            <img src="https://imgproc.airliners.net/photos/airliners/7/8/2/3882287.jpg?v=v436d50086e9" alt="Ryan"><br/><br/>
+            
+            And inputs: <br/>
+            <form action="{% url 'search' %}">
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+{% endblock %}

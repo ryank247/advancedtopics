@@ -1,0 +1,47 @@
+{% extends "presentation/layout.html" %}
+
+{% block title%}
+    Unit 2
+{% endblock %}
+
+{% block body %}
+    <body>
+        <div style="margin-left: 50px">
+            In Unit 2, we learned about SQL, Models, and Much More!
+            <br> We learned how to use SQL to store information for models and objects, which would later be used to enhance a changing website.
+            <br>
+            <br>
+            SQL allowed us to retrieve and set items/characteristics to objects such as seen in this image:
+            <br><img src="https://cs50.harvard.edu/web/2020/notes/4/images/like.png" alt="img" style="height:30%; width:30%;">
+            <br>By having tables like this, it makes it easier for our website to work, for example, if I needed to find the length of a flight to put on a different page of the website.
+            <br>
+            <br>Something that we used with SQL are Django Models which offer a multitude of field types:
+            <ul>
+                <li>
+                    <strong> Char </strong> - Strings (Ex: names)
+                </li>
+                <li>
+                    <strong> Int </strong> - Integers (Ex: age)
+                </li>
+                <li>
+                    <strong> Boolean </strong> - True / False Boolean Values (Ex: is male or not)
+                </li>
+                <li>
+                    <strong> Foreignkey </strong> - Many to One Relationship (Ex: child to their father)
+                </li>
+            </ul>
+            <br>Now that you have these models, you have to make migrations to create a database to store this information of the models:
+            <br>To do so:
+            <br>First, python manage.py makemigrations, which creates files to store our models.
+            <br>Next, python manage.py migrate, which then applies migrations to the database, whcih just helps your code run correctly and have the data stored.
+            <br>
+            <br>Now let's go over our project for this unit:
+            <br><a class="nav-link" href="{% url 'ebay' %}">Wikipedia Project</a>
+        </div>
+
+
+
+
+
+    </body>
+{% endblock %}

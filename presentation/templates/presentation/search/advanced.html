@@ -1,0 +1,67 @@
+{% extends "presentation/layout.html" %}
+
+{% load static %}
+
+{% block title%}
+    Advanced
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'presentation/searchstyle.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+        <div class = "other_page">
+            <form action="{% url 'search' %}">
+                <input type = "submit" value = "Google Search" class = "other_button">
+            </form>
+            <form action="{% url 'image' %}">
+                <input type = "submit" value = "Image Search" class = "other_button">
+            </form>
+        </div>
+        <form action="https://google.com/search">
+            <table>
+                <tr>
+                    <th>
+                        <h1>
+                            Find pages with...
+                        </h1>
+                    </th>
+                </tr>
+                <tr> <!-- all these words -->
+                    <th>
+                        <p>all these words:</p>
+                    </th>
+                    <th>
+                        <input type="text" name="q">
+                    </th>
+                </tr>
+                <tr> <!-- this exact word or phrase -->
+                    <th>
+                        <p>this exact word or phrase:</p>
+                    </th>
+                    <th>
+                        <input type="text" name="epq">
+                    </th>
+                </tr>
+                <tr> <!-- any of these words -->
+                    <th>
+                        <p>any of these words:</p>
+                    </th>
+                    <th>
+                        <input type="text" name="oq">
+                    </th>
+                </tr>
+                <tr> <!-- none of these words -->
+                    <th>
+                        <p>none of these words:</p>
+                    </th>
+                    <th>
+                        <input type ="text" name = "eq">
+                    </th>
+                </tr>
+            </table>
+            <!-- search -->
+            <input type="submit" value="Advanced Search" class = "advanced_button">
+        </form>
+{% endblock %}
